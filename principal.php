@@ -27,7 +27,6 @@ function SumarOcasion () {
 			} else {
 				$NuevoCons = 0;
 			}
-			
 			//Implementar class.upload.php
 			//https://github.com/verot/class.upload.php
 			//La variable que viene es $FotoNuevoOcasion
@@ -49,7 +48,6 @@ function SumarOcasion () {
 				echo 'error : ' . $handle->error;
 			  }
 			}
-			
 			//Falta por asignar los nombres correctos de las columnas
 			//Hay que añadir una columna nueva a la base de datos que sea "consultar" dónde meta el dato que acabo de recoger
 			$save_newocasion= "INSERT INTO `oportunidades`(`titulo`, `descripcion`, `precio`, `foto`, consultar) VALUES ('$NuevoNombre','$NuevoDesc','$NuevoPrecio','$NuevoFoto','$NuevoCons')";
@@ -61,7 +59,6 @@ function SumarOcasion () {
 		}
 	}else {}
 }
-
 function BorrarOcasion () {
 //Actualizar datos una vez pulsado el actualizar
 if (isset ($_POST['DeleteOcasion'])) {
@@ -75,7 +72,6 @@ if (isset ($_POST['DeleteOcasion'])) {
 								}
 }else {}
 }
-
 function EdicionOcasion () {
 //Actualizar datos una vez pulsado el actualizar
 if (isset ($_POST["EdicionOcasion"])) {
@@ -121,8 +117,6 @@ if (!isset($_SESSION["usuario"])) {
 	}
 }else {}
 
-
-	
 ?>
 <!DOCTYPE html>
 <html lang="es">
