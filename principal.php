@@ -48,8 +48,6 @@ function SumarOcasion () {
 				echo 'error : ' . $handle->error;
 			  }
 			}
-			//Falta por asignar los nombres correctos de las columnas
-			//Hay que añadir una columna nueva a la base de datos que sea "consultar" dónde meta el dato que acabo de recoger
 			$save_newocasion= "INSERT INTO `oportunidades`(`titulo`, `descripcion`, `precio`, `foto`, consultar) VALUES ('$NuevoNombre','$NuevoDesc','$NuevoPrecio','$NuevoFoto','$NuevoCons')";
 			if (mysqli_query($_SESSION['con'], $save_newocasion)or die(mysqli_error($_SESSION['con']))) {
 				echo "<div class=\"alert alert-success\" role=\"alert\">Añadido <strong>".$NuevoNombre."</strong> correctamente</div>";
